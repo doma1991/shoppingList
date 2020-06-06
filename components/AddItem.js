@@ -9,8 +9,8 @@ const onChange = (textValue) => setText(textValue);
 
   return (
     <View>
-        <TextInput placeholder="Add Item..." style={styles.input} onChangeText={onChange} />
-        <TouchableOpacity style={styles.btn} onPress={() => addItem(text)}>
+        <TextInput placeholder="Add Item..." style={styles.input} onChangeText={onChange} value={text} />
+        <TouchableOpacity style={styles.btn} onPress={() => { addItem(text); setText("") }}>
             <Text style={styles.btnText}><Icon name="plus" size={20}></Icon></Text>
         </TouchableOpacity>
     </View>

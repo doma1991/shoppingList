@@ -24,6 +24,7 @@ const addItem = (text) => {
 Alert.alert('Error', 'Please enter an item', [{text: 'OK'}]);
   } else {
 setItems(prevItems => { return [{id: uuidv4(), text}, ...prevItems]; });
+//clear textbox 
 }
 }
 
