@@ -24,12 +24,12 @@ const styles = StyleSheet.create({
      fontSize: 16,
  },
  btn: {
-     backgroundColor: '#c2bad8',
+     backgroundColor: '#4dc5da',
      padding: 9,
      margin: 5,
  },
  btnText: {
-     color: 'darkslateblue',
+     color: '#002b5c',
      fontSize: 20,
      textAlign: 'center'
  }
