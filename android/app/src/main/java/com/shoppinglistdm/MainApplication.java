@@ -1,4 +1,4 @@
-package com.shoppinglist;
+package com.shoppinglistdm;
 
 import android.app.Application;
 import android.content.Context;

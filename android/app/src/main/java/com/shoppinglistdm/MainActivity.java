@@ -1,4 +1,4 @@
-package com.shoppinglist;
+package com.shoppinglistdm;
 
 import com.facebook.react.ReactActivity;
 
