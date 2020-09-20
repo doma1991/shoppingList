@@ -8,7 +8,9 @@ import AsyncStorage from '@react-native-community/async-storage';
 
 const App = () => {
 
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState([
+    {id: uuidv4(), text: "First Item"}
+  ]);
 
   const saveData = async () => {
     try {
@@ -21,7 +23,9 @@ const App = () => {
   const readData = async () => {
     try {
       const userData = await AsyncStorage.getItem("KEY")
+      if (userData !== null) {
       setItems(JSON.parse(userData));
+      }
     } catch (e) {
       Alert.alert('Failed to fetch the data from storage.')
     }
@@ -43,7 +47,6 @@ const App = () => {
     setItems(prevItems => {
       return prevItems.filter(item => item.id != id);
     });
-    removeData();
     saveData();
   }
 
@@ -52,7 +55,6 @@ const App = () => {
       Alert.alert('Error', 'Please enter an item.', [{ text: 'OK' }]);
     } else {
       setItems(prevItems => { return [{ id: uuidv4(), text }, ...prevItems]; })
-      removeData();
       saveData();
     }
   }
